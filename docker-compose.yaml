@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+    # GLPI container
+    glpi:
+        build: .
+        ports:
+            - "8085:80"
+        env_file:
+            - ./glpi.env
+        volumes:
+            - glpi_data:/var/www/html/glpi
+            - ./fusioninventory:/var/www/html/glpi/plugins
+
+    # Database container
+    mysql:
+        image: mariadb
+        env_file:
+            - ./glpi.env
+        volumes:
+            - mysql_data:/var/lib/mysql
+
