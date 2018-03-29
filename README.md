@@ -61,7 +61,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 For GLPI, clone my git repo
 ```
-git clone https://github.com/Griffith3D/SIO.git
+git clone https://github.com/Griffith3D/GLPI.git
 ```
 It will create a folder in your current path
 
@@ -82,7 +82,7 @@ sudo curl -L https://github.com/fusioninventory/fusioninventory-for-glpi/release
 
 Unzip it
 ```
-sudo tar xvzf fusion.tar.bz2
+sudo tar xvjf fusion.tar.bz2
 ```
 
 ## Start containers
