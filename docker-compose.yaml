@@ -11,6 +11,7 @@ services:
         volumes:
             - glpi_data:/var/www/html/glpi
             - ./fusioninventory:/var/www/html/glpi/plugins
+        #restart: unless-stopped         décommenter si vous voulez que les containers se lancent au boot
 
     # Database container
     mysql:
@@ -19,4 +20,5 @@ services:
             - ./glpi.env
         volumes:
             - mysql_data:/var/lib/mysql
+        #restart: unless-stopped
 
